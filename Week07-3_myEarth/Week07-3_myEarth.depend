@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1682943262 source:c:\users\ain22\desktop\week07-3_myearth\main.cpp
+	<opencv/highgui.h>
+	<opencv/cv.h>
+	<GL/glut.h>
+
+1676549746 c:\users\ain22\desktop\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1676549746 c:\users\ain22\desktop\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
