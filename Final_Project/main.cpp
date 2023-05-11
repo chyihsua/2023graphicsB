@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <GL/glut.h>
+#include "glm.h"
+
+GLMmodel * head = NULL;
+GLMmodel * body =NULL;
+GLMmodel * Ruparm=NULL;
+GLMmodel * Luparm=NULL;
 
 float teapotX=0,teapotY=0;
 FILE * fout=NULL;
@@ -8,9 +14,20 @@ FILE * fin=NULL;
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+    if (head==NULL)
+    {
+        head=glmReadOBJ("model/head.obj");
+        body=glmReadOBJ("model/body.obj");
+        Ruparm=glmReadOBJ("model/r_up_arm.obj");
+        Luparm=glmReadOBJ("model/l_up_arm.obj");
+        ///glmUnitize(head);
+    }
     glPushMatrix();
-        glTranslatef(teapotX,teapotY,0);
-        glutSolidTeapot(0.3);
+        glScalef(0.3,0.3,0.3);
+        glmDraw(Luparm,GLM_MATERIAL);
+        glmDraw(Ruparm,GLM_MATERIAL);
+        glmDraw(body,GLM_MATERIAL);
+        glmDraw(head,GLM_MATERIAL);
     glPopMatrix();
     glutSwapBuffers();
 }
