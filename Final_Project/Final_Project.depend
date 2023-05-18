@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1684388257 source:c:\users\administrator\desktop\2023graphicsb\final_project\main.cpp
+1684397504 source:c:\users\administrator\desktop\2023graphicsb\final_project\main.cpp
 	<stdio.h>
 	<GL/glut.h>
 	"glm.h"

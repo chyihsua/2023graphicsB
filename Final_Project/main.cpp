@@ -9,6 +9,7 @@ GLMmodel * Luparm=NULL;
 
 int show[4]={1,1,1,1};
 int ID=2;
+float angle=0;
 
 float teapotX=0,teapotY=0;
 FILE * fout=NULL;
@@ -29,8 +30,8 @@ void display()
     {
         head=glmReadOBJ("model/head.obj");
         body=glmReadOBJ("model/body.obj");
-        Ruparm=glmReadOBJ("model/r_up_arm.obj");
-        Luparm=glmReadOBJ("model/l_up_arm.obj");
+        Ruparm=glmReadOBJ("model/uparmR.obj");
+        Luparm=glmReadOBJ("model/uparmL.obj");
         ///glmUnitize(head);
     }
     glPushMatrix();
@@ -47,14 +48,29 @@ void display()
         else glColor3f(1,1,1);
         if (show[1]) glmDraw(body,GLM_MATERIAL);
 
-        if(ID==2)glColor3f(1,0,0);
-        else glColor3f(1,1,1);
-        if (show[2]) glmDraw(Ruparm,GLM_MATERIAL);
+        glPushMatrix();
+            ///glTranslatef(teapotX,teapotY,0);為了得知Translate要移動多少
+            glTranslatef(-1.360000,0.360000,0);
+            glRotatef(angle,0,0,1);
+            glTranslatef(1.360000,-0.360000,0);
 
-        if(ID==3)glColor3f(1,0,0);
-        else glColor3f(1,1,1);
-        if (show[3]) glmDraw(Luparm,GLM_MATERIAL);
+            if(ID==2)glColor3f(1,0,0);
+            else glColor3f(1,1,1);
+            if (show[2]) glmDraw(Ruparm,GLM_MATERIAL);
+
+            glPushMatrix();
+                ///glTranslatef(teapotX,teapotY,0);為了得知Translate要移動多少
+                glTranslatef(-1.360000,0.360000,0);
+                glRotatef(angle,0,0,1);
+                glTranslatef(1.360000,-0.360000,0);
+                if(ID==3)glColor3f(1,0,0);
+                else glColor3f(1,1,1);
+                if (show[3]) glmDraw(Luparm,GLM_MATERIAL);
+            glPopMatrix();
+        glPopMatrix();
     glPopMatrix();
+    glColor3f(0,1,0);
+    glutSolidTeapot(0.02);///用來表示中心點
     glutSwapBuffers();
 }
 
@@ -72,10 +88,13 @@ void motion(int x,int y)
 {
     teapotX+=(x-oldX)/150.0;
     teapotY-=(y-oldY)/150.0;
+    printf("Translatef(%f ,%f ,0)",teapotX,teapotY);
+    angle+=x-oldX;
     oldX=x;
     oldY=y;
     glutPostRedisplay();///重畫畫面
 }
+
 int main(int argc,char**argv)
 {
     glutInit(&argc,argv);
