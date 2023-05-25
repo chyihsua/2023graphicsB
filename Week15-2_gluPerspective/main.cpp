@@ -33,8 +33,9 @@ static void resize(int width, int height)
     glMatrixMode(GL_PROJECTION);    ///切換成投影矩陣(改長寬比使用)
     glLoadIdentity();
     //glFrustum(-ar, ar, -1.0, 1.0, 2.0, 100.0);
-    glOrtho(-ar*3, ar*3, -1.0*3, 1.0*3, 2.0, 100.0);
-    ///透視投影 *3 -> 太近看不到全部，所以*3
+    //glOrtho(-ar*3, ar*3, -1.0*3, 1.0*3, 2.0, 100.0);  ///透視投影 *3 -> 太近看不到全部，所以*3
+    gluPerspective(60,  ar,     0.01,  1000);
+    ///透視投影  角度 長寬比 近的距離 遠的距離
 
     glMatrixMode(GL_MODELVIEW); ///切換成model view矩陣
     glLoadIdentity() ;  ///還原成單位矩陣
