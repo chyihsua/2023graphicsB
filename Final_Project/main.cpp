@@ -8,8 +8,8 @@ GLMmodel * Ruparm=NULL;
 GLMmodel * Luparm=NULL;
 
 int show[4]={1,1,1,1};
-int ID=2;
-float angle=0;
+int ID=3;
+float angle[20]={};
 
 float teapotX=0,teapotY=0;
 FILE * fout=NULL;
@@ -49,10 +49,10 @@ void display()
         if (show[1]) glmDraw(body,GLM_MATERIAL);
 
         glPushMatrix();
-            ///glTranslatef(teapotX,teapotY,0);為了得知Translate要移動多少
-            glTranslatef(-1.360000,0.360000,0);
-            glRotatef(angle,0,0,1);
-            glTranslatef(1.360000,-0.360000,0);
+            //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
+            glTranslatef(-1.360000,0.50000,0);
+            glRotatef(angle[2],0,0,1);
+            glTranslatef(1.360000,-0.50000,0);
 
             if(ID==2)glColor3f(1,0,0);
             else glColor3f(1,1,1);
@@ -61,9 +61,10 @@ void display()
             glPushMatrix();
                 ///glTranslatef(teapotX,teapotY,0);為了得知Translate要移動多少
                 glTranslatef(-1.360000,0.360000,0);
-                glRotatef(angle,0,0,1);
+                glRotatef(angle[3],0,0,1);
                 glTranslatef(1.360000,-0.360000,0);
-                if(ID==3)glColor3f(1,0,0);
+
+                if(ID==3) glColor3f(1,0,0);
                 else glColor3f(1,1,1);
                 if (show[3]) glmDraw(Luparm,GLM_MATERIAL);
             glPopMatrix();
@@ -89,7 +90,7 @@ void motion(int x,int y)
     teapotX+=(x-oldX)/150.0;
     teapotY-=(y-oldY)/150.0;
     printf("Translatef(%f ,%f ,0)",teapotX,teapotY);
-    angle+=x-oldX;
+    angle[ID]+=x-oldX;
     oldX=x;
     oldY=y;
     glutPostRedisplay();///重畫畫面
@@ -98,7 +99,7 @@ void motion(int x,int y)
 int main(int argc,char**argv)
 {
     glutInit(&argc,argv);
-    glutInitDisplayMode(GLUT_DOUBLE||GLUT_DEPTH);
+    glutInitDisplayMode(GLUT_DOUBLE|GLUT_DEPTH);
     glutCreateWindow("week15");
 
     glutMotionFunc(motion);

@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/week12-4_keyboard_mouse" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Week12-4_keyboard_mouse" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/week12-4_keyboard_mouse" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Week12-4_keyboard_mouse" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
