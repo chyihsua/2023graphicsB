@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1685600073 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\main.cpp
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+
+1685595478 c:\users\administrator\desktop\2023graphicsb\final_project\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1685595478 c:\users\administrator\desktop\2023graphicsb\final_project\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1685601325 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\16-1.c
+	<GL/glut.h>
+
+1685600372 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\16-3.c
+	<GL/glut.h>
+
+1685601189 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\16-4.c
+	<stdio.h>
+	<GL/glut.h>
+
+1685601261 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\16-5.c
+	<stdio.h>
+	<GL/glut.h>
+
+1685601301 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\16-6.c
+	<stdio.h>
+	<GL/glut.h>
+
+1685602390 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\16-7.c
+	<stdio.h>
+	<GL/glut.h>
+	"glm.h"
+
+1685602537 source:c:\users\administrator\desktop\2023graphicsb\week16_all_review\16-2.c
+	<GL/glut.h>
+
+1685595478 c:\users\administrator\desktop\2023graphicsb\week16_all_review\glm.h
+	<GL/glut.h>
+
