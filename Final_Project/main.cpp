@@ -53,8 +53,28 @@ void display()
 
         ///glmUnitize(head);
     }
+
     glPushMatrix(); ///?
         glScalef(0.3,0.3,0.3);
+
+        glPushMatrix(); ///Reye v ?
+            //glTranslatef(teapotX,teapotY,0);
+            glColor3f(0,0,0);
+            //if(ID==1)glColor3f(1,0,0);
+            //else glColor3f(1,1,1);
+            glmDraw(Reye,GLM_MATERIAL);
+        glPopMatrix();
+
+        glPushMatrix(); ///Leye v ?
+            //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
+            //glTranslatef(-1.086666 ,0.593333 ,0);
+            //glRotatef(angle[2],0,0,1);
+            //glTranslatef(1.160000 ,-0.633334 ,0);
+            glColor3f(0,0,0);
+            //if(ID==2)glColor3f(1,0,0);
+            //else glColor3f(1,1,1);
+            glmDraw(Leye,GLM_MATERIAL);
+        glPopMatrix();
 
         glPushMatrix(); ///body v
             //glTranslatef(teapotX,teapotY,0);
@@ -64,42 +84,25 @@ void display()
             if (show[0]) glmDraw(body,GLM_MATERIAL);
         glPopMatrix();
 
-        glPushMatrix(); ///Reye v
-            //glTranslatef(teapotX,teapotY,0);
 
-            if(ID==1)glColor3f(1,0,0);
-            else glColor3f(1,1,1);
-            if (show[1]) glmDraw(Reye,GLM_MATERIAL);
-        glPopMatrix();
 
-        glPushMatrix(); ///Leye v
-            //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
-            //glTranslatef(-1.086666 ,0.593333 ,0);
-            //glRotatef(angle[2],0,0,1);
-            //glTranslatef(1.160000 ,-0.633334 ,0);
-
-            if(ID==2)glColor3f(1,0,0);
-            else glColor3f(1,1,1);
-            if (show[2]) glmDraw(Leye,GLM_MATERIAL);
-        glPopMatrix();
-
-        glPushMatrix(); ///Left Arm hand
+        glPushMatrix(); ///Left Arm hand ?
             glPushMatrix(); ///LArm
-            //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
-            glTranslatef(-0.979998 ,0.959998 ,0);
-            glRotatef(angle[2],0,0,1);///?
-            glTranslatef(0.979998 ,-0.959998 ,0);
+                //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
+                glTranslatef(1.143333 ,-0.640000 ,0);
+                glRotatef(angle[3],0,0,1);///?
+                glTranslatef(-1.206666 ,0.653333 ,0);
 
-            if(ID==3)glColor3f(1,0,0);
-            else glColor3f(1,1,0);
-            if (show[3]) glmDraw(Larm,GLM_MATERIAL);
+                if(ID==3)glColor3f(1,0,0);
+                else glColor3f(1,1,0);
+                if (show[3]) glmDraw(Larm,GLM_MATERIAL);
             glPopMatrix();
 
             glPushMatrix(); ///Lhand
                 //glTranslatef(teapotX,teapotY,0);//為了得知Translate要移動多少
-                glTranslatef(2.159998 ,-0.620000 ,0);
-                glRotatef(angle[3],0,0,1);///?
-                glTranslatef(-2.159998 ,0.620000 ,0);
+                glTranslatef(2.106666 ,-0.620000 ,0);
+                glRotatef(angle[4],0,0,1);///?
+                glTranslatef(-2.199998 ,0.619999 ,0);
 
                 if(ID==4) glColor3f(1,0,0);
                 else glColor3f(0.4,0.4,0.4); //grey
@@ -107,7 +110,53 @@ void display()
             glPopMatrix();
         glPopMatrix();
 
+        glPushMatrix(); ///Lleg
+            //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
+            glTranslatef(0.493334 ,-1.866666 ,0);
+            glRotatef(angle[5],0,0,1);
+            glTranslatef(-0.346666 ,1.846665 ,0);
+
+            if(ID==5)glColor3f(1,0,0);
+            else glColor3f(1,1,0);
+            if (show[5]) glmDraw(Lleg,GLM_MATERIAL);
+        glPopMatrix();
+
+        glPushMatrix(); ///Right Arm hand ?
+            glPushMatrix(); ///RArm
+                //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
+                glTranslatef(-1.233332 ,-0.620001 ,0);
+                glRotatef(angle[6],0,0,1);///?
+                glTranslatef(1.299999 ,0.633333 ,0);
+
+                if(ID==6)glColor3f(1,0,0);
+                else glColor3f(1,1,0);
+                if (show[6]) glmDraw(Rarm,GLM_MATERIAL);
+            glPopMatrix();
+
+            glPushMatrix(); ///Rhand
+                //glTranslatef(teapotX,teapotY,0);//為了得知Translate要移動多少
+                glTranslatef(-2.093333 ,-0.606667 ,0);
+                glRotatef(angle[7],0,0,1);///?
+                glTranslatef(2.166666 ,0.613333 ,0);
+
+                if(ID==7) glColor3f(1,0,0);
+                else glColor3f(0.4,0.4,0.4); //grey
+                if (show[7]) glmDraw(Rhand,GLM_MATERIAL);
+            glPopMatrix();
+        glPopMatrix();
+
+        glPushMatrix(); ///Rleg
+            //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
+            glTranslatef(-0.406668 ,-1.919999 ,0);
+            glRotatef(angle[8],0,0,1);
+            glTranslatef(0.413334 ,1.886665 ,0);
+
+            if(ID==8)glColor3f(1,0,0);
+            else glColor3f(1,1,0);
+            if (show[8]) glmDraw(Rleg,GLM_MATERIAL);
+        glPopMatrix();
     glPopMatrix();
+
     glColor3f(0,1,0);
     glutSolidTeapot(0.02);///用來表示中心點
     glutSwapBuffers();
