@@ -61,7 +61,7 @@
 	<GL/glut.h>
 	"glm.h"
 
-1686121570 source:c:\users\ain22\desktop\2023graphicsb\final_project\glm.cpp
+1686127324 source:c:\users\ain22\desktop\2023graphicsb\final_project\glm.cpp
 	<math.h>
 	<stdio.h>
 	<stdlib.h>
@@ -69,13 +69,13 @@
 	<assert.h>
 	"glm.h"
 
-1686121570 c:\users\ain22\desktop\2023graphicsb\final_project\glm.h
+1686127324 c:\users\ain22\desktop\2023graphicsb\final_project\glm.h
 	<GL/glut.h>
 
-1686121570 c:\users\ain22\desktop\2023graphicsb\final_project\freeglut\include\gl\glut.h
+1686127324 c:\users\ain22\desktop\2023graphicsb\final_project\freeglut\include\gl\glut.h
 	"freeglut_std.h"
 
-1686121570 c:\users\ain22\desktop\2023graphicsb\final_project\freeglut\include\gl\freeglut_std.h
+1686127324 c:\users\ain22\desktop\2023graphicsb\final_project\freeglut\include\gl\freeglut_std.h
 	<windows.h>
 	<EGL/egl.h>
 	<GLES/gl.h>
@@ -86,7 +86,7 @@
 	<GL/glu.h>
 	<stdlib.h>
 
-1686122887 source:c:\users\ain22\desktop\2023graphicsb\final_project\main.cpp
+1686129861 source:c:\users\ain22\desktop\2023graphicsb\final_project\main.cpp
 	<opencv/highgui.h>
 	<opencv/cv.h>
 	<stdio.h>

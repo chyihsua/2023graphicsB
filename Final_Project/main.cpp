@@ -54,6 +54,24 @@ void keyboard(unsigned char key,int x, int y)
     }
     glutPostRedisplay(); ///重畫畫面
 }
+
+void mouse(int button,int state,int x,int y)
+{
+        oldX=x;
+        oldY=y;
+}
+
+void motion(int x, int y) {
+    teapotX += (x - oldX) / 150.0 * 10; ///teapotX = (x-150)/150.0;
+    teapotY += (oldY - y) / 150.0 * 10; ///teapotY = (150-y)/150.0;
+    angle[ID] += x - oldX;
+    angle2[ID] += oldY - y;
+    oldX = x;
+    oldY = y;
+    glutPostRedisplay();
+    printf("  glTranslatef( %.2f, %.2f, 0 ); \n", teapotX, teapotY );
+}
+
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
@@ -61,26 +79,11 @@ void display()
         glScalef(0.3,0.3,0.3);
         glPushMatrix(); ///all model
             glColor3f(1,1,0);  //yellow
-            glmDraw(body,GLM_MATERIAL); ///body
-
-            glPushMatrix(); ///Reye v ?
-                //glTranslatef(teapotX,teapotY,0);
-                glColor3f(1,1,1);
-                //if(ID==1)glColor3f(1,0,0);
-                //else glColor3f(1,1,1);
-                glmDraw(Reye,GLM_MATERIAL);
-            glPopMatrix();
-
-            glPushMatrix(); ///Leye v ?
-                //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
-                //glTranslatef(-1.086666 ,0.593333 ,0);
-                //glRotatef(angle[2],0,0,1);
-                //glTranslatef(1.160000 ,-0.633334 ,0);
-                glColor3f(1,1,1);
-                //if(ID==2)glColor3f(1,0,0);
-                //else glColor3f(1,1,1);
-                glmDraw(Leye,GLM_MATERIAL);
-            glPopMatrix();
+            //glmDraw(body,GLM_MATERIAL); ///body
+            glColor3f(1,1,1);
+            glmDraw(Reye,GLM_MATERIAL); ///Reye
+            glColor3f(1,1,1);
+            glmDraw(Leye,GLM_MATERIAL); ///Leye
 
             glPushMatrix(); ///Left Arm hand ?
                  ///LArm
@@ -96,10 +99,10 @@ void display()
 
                 glPushMatrix(); ///Lhand
                     //glTranslatef(teapotX,teapotY,0);//為了得知Translate要移動多少
-                    //glTranslatef(2.07, -0.67 ,0);
-                    //glRotatef(angle[4],0,1,0);
-                    //glRotatef(angle2[4],1,0,0);///?
-                    //glTranslatef( -2.07, 0.67, 0 );
+                    glTranslatef(  2.20, -0.60 ,0);
+                    glRotatef(angle[4],0,1,0);
+                    glRotatef(angle2[4],1,0,0); ///?
+                    glTranslatef( -2.20, 0.60, 0 );
 
                     if(ID==4) glColor3f(1,0,0);
                     else glColor3f(0.4,0.4,0.4); //grey
@@ -163,24 +166,6 @@ void display()
     glColor3f(0,1,0);
     glutSolidTeapot(0.02);///用來表示中心點
     glutSwapBuffers();
-}
-
-
-void mouse(int button,int state,int x,int y)
-{
-        oldX=x;
-        oldY=y;
-}
-
-void motion(int x, int y) {
-    teapotX += (x - oldX) / 150.0 * 10; ///teapotX = (x-150)/150.0;
-    teapotY += (oldY - y) / 150.0 * 10; ///teapotY = (150-y)/150.0;
-    angle[ID] += x - oldX;
-    angle2[ID] += oldY - y;
-    oldX = x;
-    oldY = y;
-    glutPostRedisplay();
-    printf("  glTranslatef( %.2f, %.2f, 0 ); \n", teapotX, teapotY );
 }
 
 int main(int argc, char** argv)
