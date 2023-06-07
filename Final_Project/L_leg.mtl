@@ -1,0 +1,16 @@
+newmtl L_leg:Material
+illum 4
+Kd 0.01 0.03 0.15
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl L_leg:Sapato
+illum 4
+Kd 0.03 0.03 0.03
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
