@@ -114,7 +114,8 @@ void display()
         glPushMatrix(); ///Lleg
             //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
             glTranslatef(0.293334 ,-1.939999 ,0);
-            glRotatef(angle[5],0,0,1);
+            glRotatef(angle[5],0,1,0);
+            glRotatef(angle2[5],1,0,0);///?
             glTranslatef(-0.233332 ,1.946666 ,0);
             glTranslatef(0.006667 ,-0.066668 ,0);
 
@@ -127,7 +128,8 @@ void display()
              ///RArm
                 //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
                 glTranslatef(-1.233332 ,-0.620001 ,0);
-                glRotatef(angle[6],0,0,1);///?
+                glRotatef(angle[6],0,1,0);
+                glRotatef(angle2[6],1,0,0);///?
                 glTranslatef(1.299999 ,0.633333 ,0);
 
                 if(ID==6)glColor3f(1,0,0);
@@ -137,7 +139,8 @@ void display()
             glPushMatrix(); ///Rhand
                 //glTranslatef(teapotX,teapotY,0);//為了得知Translate要移動多少
                 glTranslatef(-2.093333 ,-0.606667 ,0);
-                glRotatef(angle[7],0,0,1);///?
+                glRotatef(angle[7],0,1,0);
+                glRotatef(angle2[7],1,0,0);///?
                 glTranslatef(2.166666 ,0.613333 ,0);
 
                 if(ID==7) glColor3f(1,0,0);
@@ -149,7 +152,8 @@ void display()
         glPushMatrix(); ///Rleg
             //glTranslatef(teapotX,teapotY,0);///為了得知Translate要移動多少
             glTranslatef(-0.226666 ,-1.959999 ,0);
-            glRotatef(angle[8],0,0,1);
+            glRotatef(angle[8],0,1,0);
+            glRotatef(angle2[8],1,0,0);///?
             glTranslatef(0.180000 ,1.939999 ,0);
             glTranslatef(0.060000 ,-0.073334 ,0);
 
