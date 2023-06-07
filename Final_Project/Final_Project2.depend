@@ -93,3 +93,35 @@
 	<GL/glut.h>
 	"glm.h"
 
+1686127324 source:c:\users\ain22\desktop\final_project\glm.cpp
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"glm.h"
+
+1686127324 c:\users\ain22\desktop\final_project\glm.h
+	<GL/glut.h>
+
+1686127324 c:\users\ain22\desktop\final_project\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1686127324 c:\users\ain22\desktop\final_project\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1686147078 source:c:\users\ain22\desktop\final_project\main.cpp
+	<opencv/highgui.h>
+	<opencv/cv.h>
+	<stdio.h>
+	<GL/glut.h>
+	"glm.h"
+
